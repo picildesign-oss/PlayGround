@@ -1,16 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="my">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta name="theme-color" content="#df9563">
-<title>Dawn Runner — Bagan</title><link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#e8b77c">
+  <title>Screwdom — Bagan</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<canvas id="game" aria-label="Dawn Runner game"></canvas><div class="grain"></div>
-<header class="topbar"><div class="brand"><div class="brand-mark">☼</div><div class="brand-name">DAWN RUNNER<span>BAGAN · MYANMAR</span></div></div><div class="hud"><div class="stat"><label>DISTANCE</label><strong id="distance">0000 <small>m</small></strong></div><div class="stat"><label>SUN TOKENS</label><strong id="tokens">0 <small>✦</small></strong></div><button id="pause" class="icon-btn" aria-label="Pause">Ⅱ</button></div></header>
-<div class="hint" id="hint"><span>←</span> <span>→</span> TO DODGE <i>·</i> <b>SPACE</b> TO JUMP <i>·</i> <b>S</b> TO SLIDE</div>
-<section class="overlay" id="start-screen"><div class="panel"><div class="eyebrow"><span></span> BAGAN · 6:12 AM <span></span></div><h1>Chase the<br><em>first light.</em></h1><p>Run the temple trail, weave through the old stones, and gather the sun tokens before sunrise.</p><div class="controls"><div><kbd>←</kbd><kbd>→</kbd><small>MOVE</small></div><div><kbd>SPACE</kbd><small>JUMP</small></div><div><kbd>S</kbd><small>SLIDE</small></div></div><button class="primary" id="start">START RUN <span>↗</span></button><div class="record">BEST DISTANCE <strong id="best">0000 m</strong></div></div></section>
-<section class="overlay hidden" id="end-screen"><div class="panel end-panel"><div class="eyebrow"><span></span> THE SUN IS UP <span></span></div><h2>Beautiful<br><em>run.</em></h2><p>You travelled <strong id="final-distance">0 m</strong> and collected <strong id="final-tokens">0 sun tokens</strong>.</p><div class="record">YOUR BEST <strong id="end-best">0000 m</strong></div><button class="primary" id="again">RUN AGAIN <span>↗</span></button></div></section>
-<section class="overlay hidden" id="pause-screen"><div class="panel pause-panel"><div class="eyebrow"><span></span> TAKE A BREATH <span></span></div><h2>Paused<span>.</span></h2><p>The dawn will wait.</p><button class="primary" id="resume">KEEP GOING <span>↗</span></button><button class="text-btn" id="quit">END THIS RUN</button></div></section>
-<div class="touch-controls" aria-label="Touch controls"><button data-action="left">←</button><button data-action="jump">↑</button><button data-action="slide">↓</button><button data-action="right">→</button></div>
-<script src="game.js"></script>
-</body></html>
+  <canvas id="game" aria-label="မြန်မာပုဂံပုံစံ 3D ဝက်အူပဟေဠိ"></canvas>
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">✺</div><div><strong>SCREWDOM</strong><span>BAGAN · MYANMAR</span></div></div>
+    <div class="stats">
+      <div class="stat"><span>အဆင့်</span><strong>၀၁</strong></div>
+      <div class="stat"><span>ကျန်ဝက်အူ</span><strong id="remaining">၁၈</strong></div>
+      <div class="stat"><span>ရွှေ့မှု</span><strong id="moves">၀</strong></div>
+    </div>
+  </header>
+  <main class="game-copy">
+    <p class="eyebrow">BAGAN SCREW PUZZLE</p>
+    <h1>ပုဂံရဲ့ <em>ရွှေဝက်အူများ</em></h1>
+    <p>ပေါ်နေတဲ့ဝက်အူကိုနှိပ်ပြီး အောက်ကနေရာ ၃ ခုထဲ ရွှေ့ပါ။<br>အရောင်တူ ၃ ခုစီ စုပြီး ရှင်းလင်းလိုက်ပါ။</p>
+  </main>
+  <div class="bottom-bar">
+    <div class="hint"><span class="hint-dot"></span> အပေါ်ဆုံးဝက်အူကိုသာ ရွေးလို့ရပါတယ်</div>
+    <button id="restart" class="restart" type="button" aria-label="ပြန်စမည်">↻ <span>ပြန်စမည်</span></button>
+  </div>
+  <section id="result" class="result hidden" aria-live="polite">
+    <div class="result-card">
+      <span class="result-symbol" id="result-symbol">✦</span>
+      <p class="eyebrow">BAGAN · LEVEL 01</p>
+      <h2 id="result-title">ပြီးပါပြီ</h2>
+      <p id="result-copy"></p>
+      <button id="play-again" type="button">ထပ်ကစားမယ် <span>↻</span></button>
+    </div>
+  </section>
+  <script src="game.js"></script>
+</body>
+</html>
